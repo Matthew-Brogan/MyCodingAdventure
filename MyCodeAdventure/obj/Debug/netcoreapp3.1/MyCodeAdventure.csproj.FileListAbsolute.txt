@@ -1,0 +1,13 @@
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\bin\Debug\netcoreapp3.1\MyCodeAdventure.exe
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\bin\Debug\netcoreapp3.1\MyCodeAdventure.deps.json
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\bin\Debug\netcoreapp3.1\MyCodeAdventure.runtimeconfig.json
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\bin\Debug\netcoreapp3.1\MyCodeAdventure.runtimeconfig.dev.json
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\bin\Debug\netcoreapp3.1\MyCodeAdventure.dll
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\bin\Debug\netcoreapp3.1\MyCodeAdventure.pdb
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.csprojAssemblyReference.cache
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.AssemblyInfoInputs.cache
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.AssemblyInfo.cs
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.csproj.CoreCompileInputs.cache
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.dll
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.pdb
+C:\Users\mbfla\source\repos\MyCodeAdventure1\MyCodeAdventure\obj\Debug\netcoreapp3.1\MyCodeAdventure.genruntimeconfig.cache
