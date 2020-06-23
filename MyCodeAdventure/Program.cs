@@ -6,7 +6,57 @@ namespace MyCodeAdventure
     class Program
     {
         static void Main(string[] args)
-        {
+        {/*TODO
+             *Story
+                    *same story line (come up iwht a story line)
+                        *town
+                        *dongion
+                        *quest
+                    *class has effects on the story
+                    *stats effects on the story line
+                            *you have to have certian stats to do sertian things
+                            *if your stats are too low you cant do some options
+                    *choiced
+                           *effects of the choices (see effects)
+                    *Objects
+                           *weapons (up damage)
+                           *potions (heal and boost mana)
+                           *Armor (take less damage/ some lowers dex.)
+                           *trophies (Helps honor & Charisma)
+             *classes
+                    *different classes ( honor system effects class. 3 classes per class)
+                            *striker
+                            *Rouge
+                            *Wizard
+                            *Monk
+                    *different stats
+                            *health
+                                *effected by damage and potions
+                            *strength 
+                                *effected by damage and potions
+                            *dexterity
+                                *effected by specific damage(leg injury) 
+                            *intelegence
+                                *effected by choices(read book...)
+                            *honor
+                                *effected by choices
+                            *charisma
+                                *effected by honor level
+                            *mana
+                                *effected by intellegence and stamina
+                            *stamina
+                                *effected by health
+                            *virtue 
+                                *effected by honor
+             *effects
+                    *hit/strength points
+                    *health points
+                    *honor points
+                    *charisma points
+                    *mana points
+                    *dexterity points
+                    *intellegence points
+             */
             Console.WriteLine("Enter Your Name:");
             string name = Console.ReadLine();
             Console.WriteLine("Choose Your Class:");
