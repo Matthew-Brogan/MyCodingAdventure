@@ -7,7 +7,7 @@ namespace MyCodeAdventure
     {
         static void Main(string[] args)
         {
-            /*TODO
+            /*TODO (random addition...to be deleted)
              *Story
                     *same story line (come up iwht a story line)
                     *Dan E. Idea:"You, a great adventurer, come home after a long journey to find the 
