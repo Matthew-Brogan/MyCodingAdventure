@@ -7,8 +7,31 @@ namespace MyCodeAdventure
     {
         static void Main(string[] args)
         {
-            /*TODO (random addition...to be deleted)
+            /*TODO 
              *Story
+                    /*Basic story line: Starts with the king hiring you, 
+                    a great adventurer, to find the lost princess. 
+                        *here we can have choices with the king, 
+                        *encounters with the people in the square, 
+                        *a fight with a drunkerd at the pub*
+                    this take you to the time square. through clues discoved 
+                    there you are led to the dark enchanted forest of dumblewood. 
+                           *here we can have an encpunter with low 
+                           *level badies, gain some stats, and loot.*
+                    while in the woods you come upon a well know gem cave
+                    (tied to the gems the princess had), you now begone your 
+                    journey into the cave.
+                         *here we can have more choices and battles with low-med enemies*
+                    buried deep in the cave is a secret dungeon held by 
+                    a group of heritic cult members.
+                            *here we can have more battles. here is where the
+                            *choices of good and bad can really pick up.*
+                    You find the princess in the dungeon and take her out of the 
+                    jail cell and return to the king.
+                            *here we can have the choice to take her to the king, 
+                            *sacrafice her to the dark lord dagon"probably need a dif name to not rip of Skyrim"*
+
+         
                     *same story line (come up iwht a story line)
                     *Dan E. Idea:"You, a great adventurer, come home after a long journey to find the 
                     *princess has been missing for weeks. Being as famous as you are, 
@@ -188,6 +211,120 @@ namespace MyCodeAdventure
             else
             { //dark path start}
             }
+            /*******************ATTACKS & DAMAGE*******************/ //Harley Rogers
+            /************Called for Example of them working*******/
+            /*****************ATTACK****************************/
+            var lightAttack = 1;
+            Console.WriteLine(LightAttack(lightAttack));
+
+            var medAttack = 1;
+            Console.WriteLine(MedAttack(medAttack));
+
+            var heavyAttack = 1;
+            Console.WriteLine(HeavyAttack(heavyAttack));
+            /****************DAMAGE*********************/
+            var lightDamage = 1;
+            Console.WriteLine(LightDamage(lightDamage));
+
+            var medDamage = 1;
+            Console.WriteLine(MedDamage(medDamage));
+
+            var heavyDamage = 1;
+            Console.WriteLine(HeavyDamage(heavyDamage));
         }
+        /*****************METHODS FOR ATTACK & DAMAGE*****************///Harley Rogers
+        /***********************ATTACK*******************************/
+        private static int[] LightAttack(int lightAttack)
+        {
+            int[] randos = new int[lightAttack];
+
+            Random num = new Random();
+
+            for (int i = 0; i < randos.Length; i++)
+            {
+                randos[i] = num.Next(2, 6);
+            }
+            int randoNum = num.Next(randos.Length);
+            Console.WriteLine(randos[randoNum]);
+
+            return null;
+        }
+        private static int[] MedAttack(int medAttack)
+        {
+            int[] randos = new int[medAttack];
+
+            Random num = new Random();
+
+            for (int i = 0; i < randos.Length; i++)
+            {
+                randos[i] = num.Next(5, 11);
+            }
+            int randoNum = num.Next(randos.Length);
+            Console.WriteLine(randos[randoNum]);
+
+            return null;
+        }
+        private static int[] HeavyAttack(int heavyAttack)
+        {
+            int[] randos = new int[heavyAttack];
+
+            Random num = new Random();
+
+            for (int i = 0; i < randos.Length; i++)
+            {
+                randos[i] = num.Next(11, 18);
+            }
+            int randoNum = num.Next(randos.Length);
+            Console.WriteLine(randos[randoNum]);
+
+            return null;
+        }
+        /******************DAMAGE*****************/
+        private static int[] LightDamage(int lightDamage)
+        {
+            int[] randos = new int[lightDamage];
+
+            Random num = new Random();
+
+            for (int i = 0; i < randos.Length; i++)
+            {
+                randos[i] = num.Next(2, 6);
+            }
+            int randoNum = num.Next(randos.Length);
+            Console.WriteLine(randos[randoNum]);
+
+            return null;
+        }
+        private static int[] MedDamage(int medDamage)
+        {
+            int[] randos = new int[medDamage];
+
+            Random num = new Random();
+
+            for (int i = 0; i < randos.Length; i++)
+            {
+                randos[i] = num.Next(5, 11);
+            }
+            int randoNum = num.Next(randos.Length);
+            Console.WriteLine(randos[randoNum]);
+
+            return null;
+        }
+        private static int[] HeavyDamage(int heavyDamage)
+        {
+            int[] randos = new int[heavyDamage];
+
+            Random num = new Random();
+
+            for (int i = 0; i < randos.Length; i++)
+            {
+                randos[i] = num.Next(11, 18);
+            }
+            int randoNum = num.Next(randos.Length);
+            Console.WriteLine(randos[randoNum]);
+
+            return null;
+        }
+
     }
 }
