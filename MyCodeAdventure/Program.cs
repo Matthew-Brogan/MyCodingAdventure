@@ -149,68 +149,93 @@ namespace MyCodeAdventure
             Console.WriteLine("Begin you journey!");
             Console.WriteLine("Press enter to begin");
             Console.ReadLine();
-            if (chosen == allclass[0])
+            if (chosen == allclass[0] ||chosen == allclass[1] || chosen == allclass[2] || chosen == allclass[3])
             {
-                Console.WriteLine("Warrior!... Warrior!... please... help!!!");
-                Console.WriteLine("As you were strolling home from the local tavern you notice a " +
-                    "fair young lady being attacked by ghouls! Will you help her?");
-
-
-            }
-            string decision1 = Console.ReadLine();
-            if (decision1 == yesOrNo[0])
-            {
-                Console.WriteLine("Which attack would you like to use?");
-
-                for (int j = 0; j < sAttack.Length; j++)
+                Console.WriteLine("The town square.Behind you is the castle gate.To your left is the pub and market; to your right is the church;" +
+                    " and in front of you is the road out of town. Where would you like to go next Adventurer?");
+                Console.WriteLine("Please choose your path:");
+                string[] townPath = { "The Pub" , "The Market" , "The Church" , "Leave Town" };
+                for (int x = 0; x < townPath.Length; x++)
                 {
-                    string strikerAttack = sAttack[j];
-                    Console.WriteLine(strikerAttack);
-
+                    Console.WriteLine(townPath[x]);
                 }
-                string cAttack = Console.ReadLine();
-                if (cAttack == sAttack[0])
+                string decision1 = Console.ReadLine();
+                switch (decision1)
                 {
-                    Console.WriteLine("Youve grazed your opponent for 4 hp.");
-                    Console.WriteLine("Beware, the enemy surrounds you! Use your special attck now!!");
-                }
-                string finisher = Console.ReadLine();
-                if (finisher == sAttack[2])
-                {
-                    Console.WriteLine("HA HA you really showed them!");
-                    Console.WriteLine("A voice coming from inside the tavern bellows");
-                    Console.WriteLine("Let's go see who'd like to celebrate with us!");
-                    Console.WriteLine("As you walk in you notice a large soldier waving in your direction" +
-                        "as you approach you are greeted with a tall jar of meade and a firm handhake.");
-
-                }
-
-
-            }
-            else
-            {
-                //dark path start
-            }
-
-            if (chosen == allclass[1])
-            {
-                Console.WriteLine("Stranger!... Help me PLEEEEASSE!");
-                Console.WriteLine("Just coming out of the storm into the tavern you hear shouting behind" +
-                    "you as the door swings closed. Will you go find out who called out to you?");
-            }
-            String decision2 = Console.ReadLine();
-            if (decision2 == yesOrNo[0])
-            {
-                Console.WriteLine("Which attack would you like to use?");
-                for (int a = 0; a < rAttack.Length; a++)
-                {
-                    string rogueAttack = rAttack[a];
-                    Console.WriteLine(rogueAttack);
+                    case "The Pub":
+                        Console.WriteLine("The Pub is pretty empty, but bar tender is behind the bar cleaning glasses. Classic. Would you like to speak with the bar tender or leave the pub?");
+                        string[] pubChoice = { "Speak with the Bartender", "Leave the pub", "Buy a bottle of Gin(You havent made money yet!)", "Back to the town square" };  
+                        foreach (string choice in pubChoice)
+                        {
+                            Console.WriteLine(choice);
+                            
+                        }
+                        string pubDecision = Console.ReadLine();
+                        if(pubDecision == pubChoice[0])
+                        {
+                            BarTalk();
+                        }
+                        break;
                 }
             }
-            else
-            { //dark path start}
+            
+            
+            {
+
             }
+            //if (decision1 == )
+            //{
+            //    Console.WriteLine("Which attack would you like to use?");
+
+            //    for (int j = 0; j < sAttack.Length; j++)
+            //    {
+            //        string strikerAttack = sAttack[j];
+            //        Console.WriteLine(strikerAttack);
+
+            //    }
+            //    string cAttack = Console.ReadLine();
+            //    if (cAttack == sAttack[0])
+            //    {
+            //        Console.WriteLine("Youve grazed your opponent for 4 hp.");
+            //        Console.WriteLine("Beware, the enemy surrounds you! Use your special attck now!!");
+            //    }
+            //    string finisher = Console.ReadLine();
+            //    if (finisher == sAttack[2])
+            //    {
+            //        Console.WriteLine("HA HA you really showed them!");
+            //        Console.WriteLine("A voice coming from inside the tavern bellows");
+            //        Console.WriteLine("Let's go see who'd like to celebrate with us!");
+            //        Console.WriteLine("As you walk in you notice a large soldier waving in your direction" +
+            //            "as you approach you are greeted with a tall jar of meade and a firm handhake.");
+
+            //    }
+
+
+            //}
+            //else
+            //{
+            //    //dark path start
+            //}
+
+            //if (chosen == allclass[1])
+            //{
+            //    Console.WriteLine("Stranger!... Help me PLEEEEASSE!");
+            //    Console.WriteLine("Just coming out of the storm into the tavern you hear shouting behind" +
+            //        "you as the door swings closed. Will you go find out who called out to you?");
+            //}
+            //String decision2 = Console.ReadLine();
+            //if (decision2 == yesOrNo[0])
+            //{
+            //    Console.WriteLine("Which attack would you like to use?");
+            //    for (int a = 0; a < rAttack.Length; a++)
+            //    {
+            //        string rogueAttack = rAttack[a];
+            //        Console.WriteLine(rogueAttack);
+            //    }
+            //}
+            //else
+            //{ //dark path start}
+            //}
             /*******************ATTACKS & DAMAGE*******************/ //Harley Rogers
             /************Called for Example of them working*******/
             /*****************ATTACK****************************/
@@ -325,6 +350,15 @@ namespace MyCodeAdventure
 
             return null;
         }
-
+        public static void BarTalk()
+        {
+            Console.WriteLine("Hello, stranger what can i do for you?");
+            string barChoice1 = "Can I ask what you know about the princess?";
+            Console.WriteLine($"{barChoice1} Please press enter to find out more!");
+            var answer = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("You speak with the bar tender and ask what he knows about the princess. He says: All that I know is that a few nights a week, she would come in here and buy a bottle of gin " +
+                "which she wouldnt drink. No, she would pour it over her hands to get tree sap off. The king doesnt allow alcohol in his castle but what was she doing with all of that sap in her hands ? ");
+        }
     }
 }
