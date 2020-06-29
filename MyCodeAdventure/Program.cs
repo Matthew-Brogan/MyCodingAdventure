@@ -174,8 +174,31 @@ namespace MyCodeAdventure
                         if(pubDecision == pubChoice[0])
                         {
                             BarTalk();
+                            Console.WriteLine("Please press enter to exit the pub");
+                            Console.ReadLine();
+                            TownScene();
+                        }
+                        else if (pubDecision == pubChoice[1])
+                        {
+                            Console.WriteLine("You are entering the Town Square!");
+                            Console.WriteLine();
+                            TownScene();
+                        }
+                        else if(pubDecision == pubChoice[2])
+                        {
+                            YoureBroke();
+                        }
+                        else
+                        {
+                            TownScene();
                         }
                         break;
+                    case "The Market":
+                        MarketScene();
+                        break;
+                        
+
+
                 }
             }
             
@@ -359,6 +382,20 @@ namespace MyCodeAdventure
             Console.WriteLine();
             Console.WriteLine("You speak with the bar tender and ask what he knows about the princess. He says: All that I know is that a few nights a week, she would come in here and buy a bottle of gin " +
                 "which she wouldnt drink. No, she would pour it over her hands to get tree sap off. The king doesnt allow alcohol in his castle but what was she doing with all of that sap in her hands ? ");
+        }
+        public static void TownScene()
+        {
+            Console.WriteLine("The town square.Behind you is the castle gate.To your left is the pub and market; to your right is the church;" +
+                    " and in front of you is the road out of town. Where would you like to go next Adventurer?");
+        }
+        public static void YoureBroke()
+        {
+            Console.WriteLine("Sorry, you dont have the coin for that!");
+        }
+        public static void MarketScene()
+        {
+            var marketgreet = "Adventurer! Adventurer! Have you found the princess yet? We are so worried for her safety?";
+            Console.WriteLine($"The market is not busy at this time of day as most people are working in the fields, but there are those who are getting their wares read to be sold. A little girl, and her mother selling fresh fish, greet you and say, {marketgreet}");
         }
     }
 }
