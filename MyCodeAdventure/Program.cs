@@ -103,7 +103,7 @@ namespace MyCodeAdventure
             Console.WriteLine("Enter Your Name:");
             string name = Console.ReadLine();
             Console.WriteLine("Choose Your Class:");
-            string[] allclass = { "Striker", "Rouge", "Wizard", "Monk" };
+            string[] allclass = { "1: Striker", "2: Rouge", "3: Wizard", "4: Monk" };
             string[] stats = { "Strength:10 Stamina:8 Dexterity:6 Intelligence:4", "Strength:6 Stamina:9 Dexterity:10 Intelligence:7", "Strength:4 Stamina:7 Dexterity:7 Intelligence:10", "Strength:6 Stamina:9 Dexterity:9 Intelligence:7" };
             string[] yesOrNo = { "yes", "no" };
             string[] sAttack = { "Light", "A light attack 4-6hp", "Heavy", "A Heavy attack 5-8hp", "Special", "Special attack, powerful but limited use: Charge at the enemy with a furious howl swinging wildly for 10hp to all nearby enemies" };//striker attacks
@@ -116,9 +116,13 @@ namespace MyCodeAdventure
                 Console.WriteLine(selectable);
             }
             string chosen = Console.ReadLine();
+            allclass[0] = "1";
+            allclass[1] = "2";
+            allclass[2] = "3";
+            allclass[3] = "4";
             if (chosen == allclass[0])
             {
-                Console.WriteLine($"{name}, You have chosen the {allclass[0]} class! The strongest and " +
+                Console.WriteLine($"{name}, You have chosen the Striker class! The strongest and " +
                     $"bravest of all!");
                 Console.WriteLine();
                 Console.WriteLine($"Your stats are as follows:");
@@ -128,20 +132,20 @@ namespace MyCodeAdventure
             }
             if (chosen == allclass[1])
             {
-                Console.WriteLine($"{name}, You have chosen the {allclass[1]} class! The quick and cunning!");
+                Console.WriteLine($"{name}, You have chosen the Rouge class! The quick and cunning!");
                 Console.WriteLine($"Your stats are as follows:");
                 Console.WriteLine($"{stats[1]}");
                 Console.WriteLine("Farewell cunning rouge!");
             }
             if (chosen == allclass[2])
             {
-                Console.WriteLine($"{name}, You have chosen the {allclass[2]} class! The wise and fearless!");
+                Console.WriteLine($"{name}, You have chosen the Wizard class! The wise and fearless!");
                 Console.WriteLine($"Your stats are as follows:{stats[2]}");
                 Console.WriteLine("Farewell wise wizard!");
             }
             if (chosen == allclass[3])
             {
-                Console.WriteLine($"{name}, You have chosen the {allclass[3]} class! The enlightend and " +
+                Console.WriteLine($"{name}, You have chosen the Monk class! The enlightend and " +
                     $"powerfull!");
                 Console.WriteLine($"Your stats are as follows:{stats[3]}");
                 Console.WriteLine("Farewell monk, may your spirit guide you!");
@@ -149,27 +153,35 @@ namespace MyCodeAdventure
             Console.WriteLine("Begin you journey!");
             Console.WriteLine("Press enter to begin");
             Console.ReadLine();
-            if (chosen == allclass[0] ||chosen == allclass[1] || chosen == allclass[2] || chosen == allclass[3])
+            if (chosen == allclass[0] || chosen == allclass[1] || chosen == allclass[2] || chosen == allclass[3])
             {
-                Console.WriteLine("The town square.Behind you is the castle gate.To your left is the pub and market; to your right is the church;" +
-                    " and in front of you is the road out of town. Where would you like to go next Adventurer?");
+                TownScene();
+                Console.WriteLine();
                 Console.WriteLine("Please choose your path:");
-                string[] townPath = { "The Pub" , "The Market" , "The Church" , "Leave Town" };
+                string[] townPath = { "1: The Pub", "2: The Market", "3: The Church", "4: Leave Town" };
                 for (int x = 0; x < townPath.Length; x++)
                 {
                     Console.WriteLine(townPath[x]);
                 }
+                townPath[0] = "1";
+                townPath[1] = "2";
+                townPath[2] = "3";
+                townPath[3] = "4";
                 string decision1 = Console.ReadLine();
                 switch (decision1)
                 {
-                    case "The Pub":
+                    case "1":
                         Console.WriteLine("The Pub is pretty empty, but bar tender is behind the bar cleaning glasses. Classic. Would you like to speak with the bar tender or leave the pub?");
-                        string[] pubChoice = { "Speak with the Bartender", "Leave the pub", "Buy a bottle of Gin(You havent made money yet!)", "Back to the town square" };  
+                        string[] pubChoice = { "1: Speak with the Bartender", "2: Leave the pub", "3: Buy a bottle of Gin(You havent made money yet!)", "4: Back to the town square" };  
                         foreach (string choice in pubChoice)
                         {
                             Console.WriteLine(choice);
                             
                         }
+                        pubChoice[0] = "1";
+                        pubChoice[1] = "2";
+                        pubChoice[2] = "3";
+                        pubChoice[3] = "4";
                         string pubDecision = Console.ReadLine();
                         if(pubDecision == pubChoice[0])
                         {
@@ -193,10 +205,28 @@ namespace MyCodeAdventure
                             TownScene();
                         }
                         break;
-                    case "The Market":
+                    case "2":
                         MarketScene();
+                        Console.WriteLine();
+                        Console.WriteLine("Please select answer 1 or 2");
+
+                        string[] marketChoice = { "1: Yes, I have found her, she is safe and sound.", "2: No, I have yet to find her." };
+                        foreach (string answer in marketChoice)
+                        {
+                            Console.WriteLine(answer);
+                        }
+                        marketChoice[0] = "1";
+                        marketChoice[1] = "2";
+
+                        var marketDecision = Console.ReadLine();
+                        if(marketDecision == marketChoice[0])
+                        {
+                            Console.WriteLine($"Praise God one and all, our prayers have been heard!\" the girl announces.\"Alert the king and the king\'s men that the princess is safe. Certainly, Adventurer the king will reward you handsomely for your bravery and skill!");
+                            
+                        }
                         break;
-                        
+                    case "3":
+                        break;
 
 
                 }
@@ -396,6 +426,26 @@ namespace MyCodeAdventure
         {
             var marketgreet = "Adventurer! Adventurer! Have you found the princess yet? We are so worried for her safety?";
             Console.WriteLine($"The market is not busy at this time of day as most people are working in the fields, but there are those who are getting their wares read to be sold. A little girl, and her mother selling fresh fish, greet you and say, {marketgreet}");
+        }
+        public static void MarketMistake()
+        {
+            Console.WriteLine("Guards with joyous looks on their faces approach, while you see others run back to the " +
+                "castle announcing the good news. " +
+                "The church bells are rung as the crowd swells around you. Do you want to:");
+            string[] mistakeChoice = { "Stay and wait for the king.", "Run away down the road out of town." };
+            foreach(string choice in mistakeChoice)
+            {
+                Console.WriteLine(choice);
+            }
+            mistakeChoice[0] = "1";
+            var marketDecision = Console.ReadLine();
+            if( marketDecision == mistakeChoice[0])
+            {
+
+            }
+
+
+
         }
     }
 }
