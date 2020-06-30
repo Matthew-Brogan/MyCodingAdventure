@@ -231,6 +231,7 @@ namespace MyCodeAdventure
                         }
                         break;
                     case "3":
+
                         break;
 
 
@@ -480,6 +481,13 @@ namespace MyCodeAdventure
             {
                 Console.WriteLine("You are now exiting The Market");
             }
+        }
+        public static void ChurchScene()
+        {
+            Console.WriteLine("The Church, which is dim inside, is lit by colorful sunlight coming through stained - glass windows and small candles in the front of the church.A priest is praying near the front of the church.");
+            Console.WriteLine();
+            Console.WriteLine("What would you do?");
+            string[] churchMainChoice = { };
         }
     }
 }
