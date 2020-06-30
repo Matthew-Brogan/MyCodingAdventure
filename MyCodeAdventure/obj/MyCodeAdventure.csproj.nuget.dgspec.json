@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mbfla\\source\\repos\\MyCodeAdventure1\\MyCodeAdventure\\MyCodeAdventure.csproj": {}
+    "C:\\Users\\harle\\Desktop\\TrueCoders\\repos\\01 MyCodingAdventure\\MyCodeAdventure\\MyCodeAdventure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mbfla\\source\\repos\\MyCodeAdventure1\\MyCodeAdventure\\MyCodeAdventure.csproj": {
+    "C:\\Users\\harle\\Desktop\\TrueCoders\\repos\\01 MyCodingAdventure\\MyCodeAdventure\\MyCodeAdventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mbfla\\source\\repos\\MyCodeAdventure1\\MyCodeAdventure\\MyCodeAdventure.csproj",
+        "projectUniqueName": "C:\\Users\\harle\\Desktop\\TrueCoders\\repos\\01 MyCodingAdventure\\MyCodeAdventure\\MyCodeAdventure.csproj",
         "projectName": "MyCodeAdventure",
-        "projectPath": "C:\\Users\\mbfla\\source\\repos\\MyCodeAdventure1\\MyCodeAdventure\\MyCodeAdventure.csproj",
-        "packagesPath": "C:\\Users\\mbfla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mbfla\\source\\repos\\MyCodeAdventure1\\MyCodeAdventure\\obj\\",
+        "projectPath": "C:\\Users\\harle\\Desktop\\TrueCoders\\repos\\01 MyCodingAdventure\\MyCodeAdventure\\MyCodeAdventure.csproj",
+        "packagesPath": "C:\\Users\\harle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harle\\Desktop\\TrueCoders\\repos\\01 MyCodingAdventure\\MyCodeAdventure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mbfla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\harle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
