@@ -99,7 +99,7 @@ namespace MyCodeAdventure
                      "the king employs your help after all his resources seemingly have been exhausted. " +
                       "The only clues that you have are a bag of uncut gems that were found hidden in her" +
                       " closet and her last known location - the town square.");
-                     //Just an idea for an opener -working on the town square scene.
+            //Just an idea for an opener -working on the town square scene.
 
             Console.WriteLine("Enter Your Name:");
             string name = Console.ReadLine();
@@ -173,18 +173,18 @@ namespace MyCodeAdventure
                 {
                     case "1":
                         Console.WriteLine("The Pub is pretty empty, but bar tender is behind the bar cleaning glasses. Classic. Would you like to speak with the bar tender or leave the pub?");
-                        string[] pubChoice = { "1: Speak with the Bartender", "2: Leave the pub", "3: Buy a bottle of Gin(You havent made money yet!)", "4: Back to the town square" };  
+                        string[] pubChoice = { "1: Speak with the Bartender", "2: Leave the pub", "3: Buy a bottle of Gin(You havent made money yet!)", "4: Back to the town square" };
                         foreach (string choice in pubChoice)
                         {
                             Console.WriteLine(choice);
-                            
+
                         }
                         pubChoice[0] = "1";
                         pubChoice[1] = "2";
                         pubChoice[2] = "3";
                         pubChoice[3] = "4";
                         string pubDecision = Console.ReadLine();
-                        if(pubDecision == pubChoice[0])
+                        if (pubDecision == pubChoice[0])
                         {
                             BarTalk();
                             Console.WriteLine("Please press enter to exit the pub");
@@ -197,7 +197,7 @@ namespace MyCodeAdventure
                             Console.WriteLine();
                             TownScene();
                         }
-                        else if(pubDecision == pubChoice[2])
+                        else if (pubDecision == pubChoice[2])
                         {
                             YoureBroke();
                         }
@@ -220,7 +220,7 @@ namespace MyCodeAdventure
                         marketChoice[1] = "2";
 
                         var marketDecision = Console.ReadLine();
-                        if(marketDecision == marketChoice[0])
+                        if (marketDecision == marketChoice[0])
                         {
                             Console.WriteLine($"Praise God one and all, our prayers have been heard!\" the girl announces.\"Alert the king and the king\'s men that the princess is safe. Certainly, Adventurer the king will reward you handsomely for your bravery and skill!");
                             MarketMistake();
@@ -237,8 +237,8 @@ namespace MyCodeAdventure
 
                 }
             }
-            
-            
+
+
             {
 
             }
@@ -295,67 +295,18 @@ namespace MyCodeAdventure
             //else
             //{ //dark path start}
             //}
-            /*******************ATTACKS & DAMAGE*******************/ //Harley Rogers
-            /************Called for Example of them working*******/
-            /*****************ATTACK****************************/
-            var lightAttack = 1;
-            Console.WriteLine(LightAttack(lightAttack));
 
-            var medAttack = 1;
-            Console.WriteLine(MedAttack(medAttack));
+            /*****************LIST OF ENEMIES**************************/
+            Enemies lowLevEnemyList = new Enemies();
+            Enemies medLevEnemyList = new Enemies();
+            Enemies highLevEnemyList = new Enemies();
+            Enemies godLevEnemyList = new Enemies();
 
-            var heavyAttack = 1;
-            Console.WriteLine(HeavyAttack(heavyAttack));
-           
+            Enemies drunk = new Enemies();
+
+
+
         }
-        /***********************ATTACK*******************************/
-        private static int[] LightAttack(int lightAttack)
-        {
-            int[] randos = new int[lightAttack];
-
-            Random num = new Random();
-
-            for (int i = 0; i < randos.Length; i++)
-            {
-                randos[i] = num.Next(2, 6);
-            }
-            int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
-
-            return null;
-        }
-        private static int[] MedAttack(int medAttack)
-        {
-            int[] randos = new int[medAttack];
-
-            Random num = new Random();
-
-            for (int i = 0; i < randos.Length; i++)
-            {
-                randos[i] = num.Next(5, 11);
-            }
-            int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
-
-            return null;
-        }
-        private static int[] HeavyAttack(int heavyAttack)
-        {
-            int[] randos = new int[heavyAttack];
-
-            Random num = new Random();
-
-            for (int i = 0; i < randos.Length; i++)
-            {
-                randos[i] = num.Next(11, 18);
-            }
-            int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
-
-            return null;
-        }
-        
-        
         public static void BarTalk()
         {
             Console.WriteLine("Hello, stranger what can i do for you?");
