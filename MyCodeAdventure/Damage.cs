@@ -11,10 +11,16 @@ namespace MyCodeAdventure
         
 
 
-        
+        /*Maybe a switch statement inside this method could allow us to run/call individual 
+         * damage methods and return the rng number "- a percentage or 1-2 damage point based on the attack"
+         * ex: if light damage is blocked return light damage * .75..
+           this might cause all of our damage to have to be parsed as doubles or floats, floats seem more logical 
+        as they are the least exact and would allow some variation in output
+         *****just an idea*****
+         */
         private static int Blocked(int a)//put in the damage here. it takes away some damage.
         {
-           
+            return a;
                 
         }
         private static int[] LightDamage(int lightDamage)
