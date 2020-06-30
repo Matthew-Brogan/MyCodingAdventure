@@ -306,17 +306,8 @@ namespace MyCodeAdventure
 
             var heavyAttack = 1;
             Console.WriteLine(HeavyAttack(heavyAttack));
-            /****************DAMAGE*********************/
-            var lightDamage = 1;
-            Console.WriteLine(LightDamage(lightDamage));
-
-            var medDamage = 1;
-            Console.WriteLine(MedDamage(medDamage));
-
-            var heavyDamage = 1;
-            Console.WriteLine(HeavyDamage(heavyDamage));
+           
         }
-        /*****************METHODS FOR ATTACK & DAMAGE*****************///Harley Rogers
         /***********************ATTACK*******************************/
         private static int[] LightAttack(int lightAttack)
         {
@@ -363,52 +354,8 @@ namespace MyCodeAdventure
 
             return null;
         }
-        /******************DAMAGE*****************/
-        private static int[] LightDamage(int lightDamage)
-        {
-            int[] randos = new int[lightDamage];
-
-            Random num = new Random();
-
-            for (int i = 0; i < randos.Length; i++)
-            {
-                randos[i] = num.Next(2, 6);
-            }
-            int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
-
-            return null;
-        }
-        private static int[] MedDamage(int medDamage)
-        {
-            int[] randos = new int[medDamage];
-
-            Random num = new Random();
-
-            for (int i = 0; i < randos.Length; i++)
-            {
-                randos[i] = num.Next(5, 11);
-            }
-            int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
-
-            return null;
-        }
-        private static int[] HeavyDamage(int heavyDamage)
-        {
-            int[] randos = new int[heavyDamage];
-
-            Random num = new Random();
-
-            for (int i = 0; i < randos.Length; i++)
-            {
-                randos[i] = num.Next(11, 18);
-            }
-            int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
-
-            return null;
-        }
+        
+        
         public static void BarTalk()
         {
             Console.WriteLine("Hello, stranger what can i do for you?");
