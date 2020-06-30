@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MyCodeAdventure
 {
@@ -222,7 +223,11 @@ namespace MyCodeAdventure
                         if(marketDecision == marketChoice[0])
                         {
                             Console.WriteLine($"Praise God one and all, our prayers have been heard!\" the girl announces.\"Alert the king and the king\'s men that the princess is safe. Certainly, Adventurer the king will reward you handsomely for your bravery and skill!");
-                            
+                            MarketMistake();
+                        }
+                        else
+                        {
+                            MarketWin();
                         }
                         break;
                     case "3":
@@ -432,20 +437,49 @@ namespace MyCodeAdventure
             Console.WriteLine("Guards with joyous looks on their faces approach, while you see others run back to the " +
                 "castle announcing the good news. " +
                 "The church bells are rung as the crowd swells around you. Do you want to:");
-            string[] mistakeChoice = { "Stay and wait for the king.", "Run away down the road out of town." };
+            string[] mistakeChoice = { "1: Stay and wait for the king.", "2: Run away down the road out of town." };
             foreach(string choice in mistakeChoice)
             {
                 Console.WriteLine(choice);
             }
             mistakeChoice[0] = "1";
+            mistakeChoice[1] = "2";
             var marketDecision = Console.ReadLine();
             if( marketDecision == mistakeChoice[0])
             {
+                Console.WriteLine("The king and queen arrive, surrounded by a large group of well - " +
+                    "armed soldiers.He is crying out, \"My Daughter, my daughter! Where is she, my little my" +
+                    " life? My daughter, my daughter, my love!?\" There is no escape now, Adventurer.The king," +
+                    " heartbroken of course, and tired by so many nights of worry, has you arrested and puts you" +
+                    " to death on the spot.So is the fate of all who would lie to the king on " +
+                    "such an intimate matter.GAME OVER");
 
             }
-
-
-
+                         
+                
+            
+        }
+        public static void MarketWin()
+        {
+            Console.WriteLine("Our prayers are with you Adventurer. The princess was so kind to us. She would purchase four fish from us a few times a " +
+                    "week before she would head out of town on one of her many 'walks.' She said the fish were for any hungry animals she came across. " +
+                    "She was our best customer. Would you like any fish today Adventurer?");
+            string[] buyOrLeave = { "1: Buy some fish.", "2: Leave the market" };
+            foreach (string option in buyOrLeave)
+            {
+                Console.WriteLine(option);
+            }
+            buyOrLeave[0] = "1";
+            buyOrLeave[1] = "2";
+            string yOrN = Console.ReadLine();
+            if (yOrN == buyOrLeave[0])
+            {
+                YoureBroke();
+            }
+            else
+            {
+                Console.WriteLine("You are now exiting The Market");
+            }
         }
     }
 }
