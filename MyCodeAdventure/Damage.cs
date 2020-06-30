@@ -12,11 +12,11 @@ namespace MyCodeAdventure
         
 
 
-<<<<<<< HEAD
+
 
         /**********************Block*********************/
-        private static void Blocked()//put in the damage here. it takes away some damage.
-=======
+       // private static void Blocked()//put in the damage here. it takes away some damage.
+
         /*Maybe a switch statement inside this method could allow us to run/call individual 
          * damage methods and return the rng number "- a percentage or 1-2 damage point based on the attack"
          * ex: if light damage is blocked assign LightDamage() to a var, and then return LightDamage * .75..
@@ -25,7 +25,7 @@ namespace MyCodeAdventure
          *****just an idea*****
          */
         private static int Blocked(int a)//put in the damage here. it takes away some damage.
->>>>>>> d0e07f168a86884d08343f1939b744667733aa09
+
         {
             return a;
                 
