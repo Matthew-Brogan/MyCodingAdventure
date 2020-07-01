@@ -24,15 +24,39 @@ namespace MyCodeAdventure
         as they are the least exact and would allow some variation in output
          *****just an idea*****
          */
-        private static int Blocked(int a)//put in the damage here. it takes away some damage.
+        public float LightBlocked()//put in the damage here. it takes away some damage.
 
         {
-            return a;
+            var baseDamage = LightDamage(5);
+            var altBase = Convert.ToSingle(baseDamage);
+            var blockedDamage = altBase *= .70f;
+
+            return blockedDamage;
                 
+        }
+        public float HeavyBlocked()//put in the damage here. it takes away some damage.
+
+        {
+            var baseDamage = HeavyDamage(5);
+            var altBase = Convert.ToSingle(baseDamage);
+            var blockedDamage = altBase *= .70f;
+
+            return blockedDamage;
+
+        }
+        public float MediumBlocked()//put in the damage here. it takes away some damage.
+
+        {
+            var baseDamage = MedDamage(5);
+            var altBase = Convert.ToSingle(baseDamage);
+            var blockedDamage = altBase *= .70f;
+
+            return blockedDamage;
+
         }
 
         /*******************Damage**********************/
-        private static int[] LightDamage(int lightDamage)
+        private static int LightDamage(int lightDamage)
         {
             int[] randos = new int[lightDamage];
 
@@ -43,9 +67,11 @@ namespace MyCodeAdventure
                 randos[i] = num.Next(2, 6);
             }
             int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
+            int answer = randos[randoNum];
 
-            return null;
+            
+
+            return answer;
         }
         private static int[] MedDamage(int medDamage)
         {

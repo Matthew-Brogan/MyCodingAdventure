@@ -108,7 +108,7 @@ namespace MyCodeAdventure
             string[] stats = { "Strength:10 Stamina:8 Dexterity:6 Intelligence:4", "Strength:6 Stamina:9 Dexterity:10 Intelligence:7", "Strength:4 Stamina:7 Dexterity:7 Intelligence:10", "Strength:6 Stamina:9 Dexterity:9 Intelligence:7" };
             string[] yesOrNo = { "yes", "no" };
             string[] sAttack = { "Light", "A light attack 4-6hp", "Heavy", "A Heavy attack 5-8hp", "Special", "Special attack, powerful but limited use: Charge at the enemy with a furious howl swinging wildly for 10hp to all nearby enemies" };//striker attacks
-            string[] rAttack = { "Light: 3-5", "Heavy: 4-7hp", "Special: Dance around with furious grace and speed, slicing and dicing all for 10 hp" };//rouge attacks
+            
 
 
             for (int i = 0; i < allclass.Length; i++)
@@ -236,66 +236,27 @@ namespace MyCodeAdventure
 
 
                 }
+                Console.WriteLine($"Press enter to continue: ");
+                Console.ReadLine();
+                Console.WriteLine("You exit the town center and wonder into the surrounding forest, \nAs you go deeper in you grow tired and decide to have a quick rest under an ancient tree.\n You are rudely awakened by the sound of two familiar voices approaching....");
+                Console.WriteLine("Bandits, and henchman of an old ally since turned enemy,\n the two men approach, you have the element of suprise! Attack now!");
+                Console.WriteLine();
+                foreach(string attack in sAttack)
+                {
+                    Console.WriteLine(attack);
+                }
+                Console.WriteLine();
+                Console.WriteLine("Select your attack!");
+                sAttack[0] = "1";
+                sAttack[1] = "2";
+                sAttack[2] = "3";
+                var usedAttack = Console.ReadLine();
+                Damage firstDamage = new Damage();
+                Console.WriteLine(firstDamage.LightBlocked());
+                Console.WriteLine(firstDamage.LightBlocked());
+
             }
-
-
-            {
-
-            }
-            //if (decision1 == )
-            //{
-            //    Console.WriteLine("Which attack would you like to use?");
-
-            //    for (int j = 0; j < sAttack.Length; j++)
-            //    {
-            //        string strikerAttack = sAttack[j];
-            //        Console.WriteLine(strikerAttack);
-
-            //    }
-            //    string cAttack = Console.ReadLine();
-            //    if (cAttack == sAttack[0])
-            //    {
-            //        Console.WriteLine("Youve grazed your opponent for 4 hp.");
-            //        Console.WriteLine("Beware, the enemy surrounds you! Use your special attck now!!");
-            //    }
-            //    string finisher = Console.ReadLine();
-            //    if (finisher == sAttack[2])
-            //    {
-            //        Console.WriteLine("HA HA you really showed them!");
-            //        Console.WriteLine("A voice coming from inside the tavern bellows");
-            //        Console.WriteLine("Let's go see who'd like to celebrate with us!");
-            //        Console.WriteLine("As you walk in you notice a large soldier waving in your direction" +
-            //            "as you approach you are greeted with a tall jar of meade and a firm handhake.");
-
-            //    }
-
-
-            //}
-            //else
-            //{
-            //    //dark path start
-            //}
-
-            //if (chosen == allclass[1])
-            //{
-            //    Console.WriteLine("Stranger!... Help me PLEEEEASSE!");
-            //    Console.WriteLine("Just coming out of the storm into the tavern you hear shouting behind" +
-            //        "you as the door swings closed. Will you go find out who called out to you?");
-            //}
-            //String decision2 = Console.ReadLine();
-            //if (decision2 == yesOrNo[0])
-            //{
-            //    Console.WriteLine("Which attack would you like to use?");
-            //    for (int a = 0; a < rAttack.Length; a++)
-            //    {
-            //        string rogueAttack = rAttack[a];
-            //        Console.WriteLine(rogueAttack);
-            //    }
-            //}
-            //else
-            //{ //dark path start}
-            //}
-
+                        
             /*****************LIST OF ENEMIES**************************/
             Enemies lowLevEnemyList = new Enemies();
             Enemies medLevEnemyList = new Enemies();
