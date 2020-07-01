@@ -265,6 +265,15 @@ namespace MyCodeAdventure
 
             Enemies drunk = new Enemies();
 
+            /* Undead: Ghoul, Zombie, Vampire, 
+             * Creature:Wolf, giant spider, giant rats, Bat, bear, boar, giant frog, angry goat, unicorn
+             * Human:Bandits, 
+             * COnstructs. Golums, (clay, stone, (controlled by evil wizard))
+             * Dragons. Gold, fire, Blue
+             * Demon: horned devil, Chain Devil, Succubus,Imp, 
+             * Others:Cave troll, goblins, orcs, 
+             * 
+             *  */
 
 
         }

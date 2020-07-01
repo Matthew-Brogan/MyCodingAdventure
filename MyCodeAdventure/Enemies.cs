@@ -16,18 +16,20 @@ namespace MyCodeAdventure
         public string Type { get; set; }
         public string ThreatLeval { get; set; }
         public int Damage { get; set; }
+        public string Attributes { get; set; }
 
 
         public Enemies()
         {
 
         }
-        public Enemies(int health, int damage, string type, string threatLeval )
+        public Enemies(int health, int damage, string type, string threatLeval, string attributes )
         {
             this.Health = health;
             this.Type = type;
             this.ThreatLeval = threatLeval;
             this.Damage = damage;
+            this.Attributes = attributes;
         }
 
 
