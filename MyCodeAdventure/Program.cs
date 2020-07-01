@@ -254,6 +254,8 @@ namespace MyCodeAdventure
                 Damage firstDamage = new Damage();
                 Console.WriteLine(firstDamage.LightBlocked());
                 Console.WriteLine(firstDamage.LightBlocked());
+                Console.WriteLine(firstDamage.MediumBlocked());
+                Console.WriteLine(firstDamage.HeavyBlocked());
 
             }
                         
