@@ -258,15 +258,96 @@ namespace MyCodeAdventure
                 Console.WriteLine(firstDamage.HeavyBlocked());
 
             }
-                        
+
             /*****************LIST OF ENEMIES**************************/
+            Enemies punyLevEnemyList = new Enemies();
             Enemies lowLevEnemyList = new Enemies();
             Enemies medLevEnemyList = new Enemies();
             Enemies highLevEnemyList = new Enemies();
             Enemies godLevEnemyList = new Enemies();
+            Enemies caveEnemyList = new Enemies();
+            Enemies forestEnemyList = new Enemies();
+            Enemies waterEnemyList = new Enemies();
+            Enemies eventEnemyList = new Enemies();
 
-            Enemies drunk = new Enemies();
+            //health(1-50), damage(1-50), type, threatLeval(1-10), attributes
 
+            //Puny enemies
+            Enemies drunk = new Enemies(1, 1, "human", "very low", "He smells really bad");
+            Enemies.PunyLevelEnemys.Add(drunk);
+            Enemies angryGoat = new Enemies(1, 2, "animal", "very low", "You must've done something to his lady goat to make him this mad!" );
+            Enemies.PunyLevelEnemys.Add(angryGoat);
+            //Low Leval Enemys
+            Enemies bandit = new Enemies(3, 4, "human", "low", "They want your loot!" );
+            Enemies.LowLevelEnemys.Add(bandit);
+            Enemies zombie = new Enemies(2, 6, "undead", "low", "It wants your brains!");
+            Enemies.LowLevelEnemys.Add(zombie);
+            Enemies imp = new Enemies(3, 3, "demon", "low", "Its a clever little fool! " );
+            Enemies.LowLevelEnemys.Add(imp);
+            Enemies goblin = new Enemies(3, 4, "humanoid", "low", "It want's your gold!" );
+            Enemies.LowLevelEnemys.Add(goblin);
+            //Medium level enemies
+            Enemies soldier = new Enemies(6, 8, "human", "medium", "Has a chip on his shoulder");
+            Enemies.MedLevelEnemys.Add(soldier);
+            Enemies hornnedDevil = new Enemies(7, 9, "demon", "medium", "Pretty much just wants you dead.");
+            Enemies.MedLevelEnemys.Add(hornnedDevil);
+            Enemies succubus = new Enemies(5, 8, "demon", "medium", "She wants you...dead. Dont fall for it bro." );
+            Enemies.MedLevelEnemys.Add(succubus);
+            Enemies orc = new Enemies(8,8,"humanoid", "medium", "Better watch out. He'll break your bones!.");
+            Enemies.MedLevelEnemys.Add(orc);
+            //High level enemies
+            Enemies knight = new Enemies(12, 10, "human", "high" , "Honor above ALL!!");
+            Enemies.HighLevelEnemys.Add(knight);
+            Enemies fireDragon = new Enemies(15, 20, "creature", "high", "He'll make you fried chicken. That is you will be the chicken..." );
+            Enemies.HighLevelEnemys.Add(fireDragon);
+            Enemies blueDragon = new Enemies(20, 15, "creature", "high", "No fire, but he's got a mean bite!");
+            Enemies.HighLevelEnemys.Add(blueDragon);
+            Enemies chainDevil = new Enemies(10, 22, "demon", "high", "I hope you like whips and chains...");
+            Enemies.HighLevelEnemys.Add(chainDevil);
+            //god level enemies
+            Enemies goldDragon = new Enemies(35, 45, "creature", "very high", "Don't touch his stach. You probably wont live." );
+            Enemies.GodLevelEnemys.Add(goldDragon);
+            Enemies leviathan = new Enemies(45, 35, "creature", "very high", "Best start running." );
+            Enemies.GodLevelEnemys.Add(leviathan);
+            //Cave enemies
+            Enemies vampire = new Enemies(10, 11, "undead", "high", "they want your blood! They also don't sparkle...");
+            Enemies.CaveEnemys.Add(vampire);
+            Enemies ghoul = new Enemies(6, 9, "undead", "med", "A less decayed zombie, cool." );
+            Enemies.CaveEnemys.Add(ghoul);
+            Enemies giantSpider = new Enemies(7, 8, "insect", "med", "Don't get bit! Poison!");
+            Enemies.CaveEnemys.Add(giantSpider);
+            Enemies giantRat = new Enemies(3, 5, "low", "creature", "Hopefully it doesn't have the black plague!");
+            Enemies.CaveEnemys.Add(giantRat);
+            Enemies bat = new Enemies(1,3, "very low", "creature", "Probably has Covid.");
+            Enemies.CaveEnemys.Add(bat);
+            Enemies caveTroll = new Enemies(12, 12, "high", "humanoid", "Do you hear the drums?");
+            Enemies.CaveEnemys.Add(caveTroll);
+            //Water enemies
+            Enemies shark = new Enemies(7, 12, "med", "creature", "Dun Dun....Dun Dun...Dun, Dundundundundun!!");
+            Enemies.WaterEnemys.Add(shark);
+            Enemies giantSquid = new Enemies(15, 8, "high", "creature", "It'll squeeze you tell you pop!");
+            Enemies.WaterEnemys.Add(giantSquid);
+            //forest enemies
+            Enemies fox = new Enemies(1, 2, "very low", "creature", "What does the fox say?");
+            Enemies.ForestEnemys.Add(fox);
+            Enemies bear = new Enemies(8, 10, "med", "creature", "Just do better than Leonardo." );
+            Enemies.ForestEnemys.Add(bear);
+            Enemies boar = new Enemies(5, 3, "low", "creature", "Oink");
+            Enemies.ForestEnemys.Add(boar);
+            Enemies wolf = new Enemies(3, 5, "low", "creature", "Thye travel in packs, watch out." );
+            Enemies.ForestEnemys.Add(wolf);
+            Enemies giantFrog = new Enemies(3, 7, "med", "creature", "It has a huge maw!");
+            Enemies.ForestEnemys.Add(giantFrog);
+            Enemies unicorn = new Enemies(5, 10, "med", "creature", "Look! A magical skewer!");
+            Enemies.ForestEnemys.Add(unicorn);
+            //event enemy   
+            Enemies stoneGolum = new Enemies(12, 12, "high", "Construct", "Hes got thicker skin than the clay one...got to find the creator!");
+            Enemies.EventEnemys.Add(stoneGolum);
+            Enemies clayGolum = new Enemies(5, 7, "low", "Construct", "Somoen must've made this dude!");
+            Enemies.EventEnemys.Add(clayGolum);
+            Enemies evilWizard = new Enemies(8, 15, "med-high", "human", "He is the contoller! Kill em quick before he makes more!" );
+            Enemies.EventEnemys.Add(evilWizard);
+            //the wizard controlls the golums
 
 
         }
