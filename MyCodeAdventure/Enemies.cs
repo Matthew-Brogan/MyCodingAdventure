@@ -6,10 +6,15 @@ namespace MyCodeAdventure
 {
     class Enemies
     {
+        public static List<Enemies> PunyLevelEnemys { get; set; } = new List<Enemies>();
         public static List<Enemies> LowLevelEnemys { get; set; } = new List<Enemies>();
         public static List<Enemies> MedLevelEnemys { get; set; } = new List<Enemies>();
         public static List<Enemies> HighLevelEnemys { get; set; } = new List<Enemies>();
         public static List<Enemies> GodLevelEnemys { get; set; } = new List<Enemies>();
+        public static List<Enemies> CaveEnemys { get; set; } = new List<Enemies>();
+        public static List<Enemies> ForestEnemys { get; set; } = new List<Enemies>();
+        public static List<Enemies> WaterEnemys { get; set; } = new List<Enemies>();
+        public static List<Enemies> EventEnemys { get; set; } = new List<Enemies>();
 
 
         public int Health { get; set; }

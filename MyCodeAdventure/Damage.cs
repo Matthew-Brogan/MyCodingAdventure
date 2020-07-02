@@ -8,14 +8,14 @@ namespace MyCodeAdventure
     {
 
         //Based on the input attack. (light, medium, heavy, blocked, blocked medium, blocked heavy)
-        
-        
+
+
 
 
 
 
         /**********************Block*********************/
-       // private static void Blocked()//put in the damage here. it takes away some damage.
+        // private static void Blocked()//put in the damage here. it takes away some damage.
 
         /*Maybe a switch statement inside this method could allow us to run/call individual 
          * damage methods and return the rng number "- a percentage or 1-2 damage point based on the attack"
@@ -24,6 +24,37 @@ namespace MyCodeAdventure
         as they are the least exact and would allow some variation in output
          *****just an idea*****
          */
+
+        public float LightCrit()//put in the damage here. it takes away some damage.
+
+        {
+            var baseDamage = LightDamage(5);
+            var altBase = Convert.ToSingle(baseDamage);
+            var critDamage = altBase *= 1.70f;
+
+            return critDamage;
+
+        }
+        public float MedCrit()//put in the damage here. it takes away some damage.
+
+        {
+            var baseDamage = MedDamage(5);
+            var altBase = Convert.ToSingle(baseDamage);
+            var critDamage = altBase *= 1.70f;
+
+            return critDamage;
+
+        }
+        public float HeavyCrit()//put in the damage here. it takes away some damage.
+
+        {
+            var baseDamage = HeavyDamage(5);
+            var altBase = Convert.ToSingle(baseDamage);
+            var critDamage = altBase *= 1.70f;
+
+            return critDamage;
+
+        }
         public float LightBlocked()//put in the damage here. it takes away some damage.
 
         {
@@ -73,7 +104,7 @@ namespace MyCodeAdventure
 
             return answer;
         }
-        private static int[] MedDamage(int medDamage)
+        private static int MedDamage(int medDamage)
         {
             int[] randos = new int[medDamage];
 
@@ -84,11 +115,11 @@ namespace MyCodeAdventure
                 randos[i] = num.Next(5, 11);
             }
             int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
+            int answer = randos[randoNum];
 
-            return null;
+            return answer;
         }
-        private static int[] HeavyDamage(int heavyDamage)
+        private static int HeavyDamage(int heavyDamage)
         {
             int[] randos = new int[heavyDamage];
 
@@ -99,9 +130,9 @@ namespace MyCodeAdventure
                 randos[i] = num.Next(11, 18);
             }
             int randoNum = num.Next(randos.Length);
-            Console.WriteLine(randos[randoNum]);
+            int answers = randos[randoNum];
 
-            return null;
+            return answers;
         }
         /********************Attack*********************/
         private static int[] LightAttack(int lightAttack)
