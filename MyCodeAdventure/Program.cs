@@ -8,6 +8,10 @@ namespace MyCodeAdventure
     {
         static void Main(string[] args)
         {
+            
+
+            Enemies.RandomPunyLeval();
+
             /*TODO 
              *Story
                     /*Basic story line: Starts with the king hiring you, 
