@@ -8,9 +8,9 @@ namespace MyCodeAdventure
     {
         static void Main(string[] args)
         {
-            
 
-            Enemies.RandomPunyLeval();
+
+
 
             /*TODO 
              *Story
@@ -96,120 +96,29 @@ namespace MyCodeAdventure
                     *
                *develop ideas for the enemy and classes(minions and adds vs boss/elite)
              */
-            Console.WriteLine("WELCOME TO CODE ADVENTURES!");
-            Console.WriteLine();
-            Console.WriteLine("You, a great adventurer, come home after a long journey to find the " +
-                    "princess has been missing for weeks.Being as famous as you are," +
-                     "the king employs your help after all his resources seemingly have been exhausted. " +
-                      "The only clues that you have are a bag of uncut gems that were found hidden in her" +
-                      " closet and her last known location - the town square.");
+            ConsoleLogging.OpenAdventure();
             //Just an idea for an opener -working on the town square scene.
 
-            Console.WriteLine("Enter Your Name:");
-            string name = Console.ReadLine();
-            Console.WriteLine("Choose Your Class:");
-            string[] allclass = { "1: Striker", "2: Rouge", "3: Wizard", "4: Monk" };
-            string[] stats = { "Strength:10 Stamina:8 Dexterity:6 Intelligence:4", "Strength:6 Stamina:9 Dexterity:10 Intelligence:7", "Strength:4 Stamina:7 Dexterity:7 Intelligence:10", "Strength:6 Stamina:9 Dexterity:9 Intelligence:7" };
+            ConsoleLogging.ChooseCharacter();
+            
             string[] yesOrNo = { "yes", "no" };
             string[] sAttack = { "Light", "A light attack 4-6hp", "Heavy", "A Heavy attack 5-8hp", "Special", "Special attack, powerful but limited use: Charge at the enemy with a furious howl swinging wildly for 10hp to all nearby enemies" };//striker attacks
+
+            ConsoleLogging.CharacterSelected();
+
             
-
-
-            for (int i = 0; i < allclass.Length; i++)
-            {
-                var selectable = allclass[i];
-                Console.WriteLine(selectable);
-            }
-            string chosen = Console.ReadLine();
-            allclass[0] = "1";
-            allclass[1] = "2";
-            allclass[2] = "3";
-            allclass[3] = "4";
-            if (chosen == allclass[0])
-            {
-                Console.WriteLine($"{name}, You have chosen the Striker class! The strongest and " +
-                    $"bravest of all!");
-                Console.WriteLine();
-                Console.WriteLine($"Your stats are as follows:");
-                Console.WriteLine($"{stats[0]}");
-                Console.WriteLine();
-                Console.WriteLine("Farewell brave warrior!");
-            }
-            if (chosen == allclass[1])
-            {
-                Console.WriteLine($"{name}, You have chosen the Rouge class! The quick and cunning!");
-                Console.WriteLine($"Your stats are as follows:");
-                Console.WriteLine($"{stats[1]}");
-                Console.WriteLine("Farewell cunning rouge!");
-            }
-            if (chosen == allclass[2])
-            {
-                Console.WriteLine($"{name}, You have chosen the Wizard class! The wise and fearless!");
-                Console.WriteLine($"Your stats are as follows:{stats[2]}");
-                Console.WriteLine("Farewell wise wizard!");
-            }
-            if (chosen == allclass[3])
-            {
-                Console.WriteLine($"{name}, You have chosen the Monk class! The enlightend and " +
-                    $"powerfull!");
-                Console.WriteLine($"Your stats are as follows:{stats[3]}");
-                Console.WriteLine("Farewell monk, may your spirit guide you!");
-            }
+            
+         
+            
             Console.WriteLine("Begin you journey!");
             Console.WriteLine("Press enter to begin");
             Console.ReadLine();
-            if (chosen == allclass[0] || chosen == allclass[1] || chosen == allclass[2] || chosen == allclass[3])
-            {
-                TownScene();
-                Console.WriteLine();
-                Console.WriteLine("Please choose your path:");
-                string[] townPath = { "1: The Pub", "2: The Market", "3: The Church", "4: Leave Town" };
-                for (int x = 0; x < townPath.Length; x++)
-                {
-                    Console.WriteLine(townPath[x]);
-                }
-                townPath[0] = "1";
-                townPath[1] = "2";
-                townPath[2] = "3";
-                townPath[3] = "4";
+          
+            
                 string decision1 = Console.ReadLine();
                 switch (decision1)
                 {
-                    case "1":
-                        Console.WriteLine("The Pub is pretty empty, but bar tender is behind the bar cleaning glasses. Classic. Would you like to speak with the bar tender or leave the pub?");
-                        string[] pubChoice = { "1: Speak with the Bartender", "2: Leave the pub", "3: Buy a bottle of Gin(You havent made money yet!)", "4: Back to the town square" };
-                        foreach (string choice in pubChoice)
-                        {
-                            Console.WriteLine(choice);
-
-                        }
-                        pubChoice[0] = "1";
-                        pubChoice[1] = "2";
-                        pubChoice[2] = "3";
-                        pubChoice[3] = "4";
-                        string pubDecision = Console.ReadLine();
-                        if (pubDecision == pubChoice[0])
-                        {
-                            BarTalk();
-                            Console.WriteLine("Please press enter to exit the pub");
-                            Console.ReadLine();
-                            TownScene();
-                        }
-                        else if (pubDecision == pubChoice[1])
-                        {
-                            Console.WriteLine("You are entering the Town Square!");
-                            Console.WriteLine();
-                            TownScene();
-                        }
-                        else if (pubDecision == pubChoice[2])
-                        {
-                            YoureBroke();
-                        }
-                        else
-                        {
-                            TownScene();
-                        }
-                        break;
+                    
                     case "2":
                         MarketScene();
                         Console.WriteLine();
@@ -352,28 +261,15 @@ namespace MyCodeAdventure
             Enemies evilWizard = new Enemies(8, 15, "med-high", "human", "He is the contoller! Kill em quick before he makes more!" );
             Enemies.EventEnemys.Add(evilWizard);
             //the wizard controlls the golums
+            Enemies.RandomPunyLeval();
+            Console.WriteLine(Enemies.PunyLevelEnemys.Count);
 
 
-        }
-        public static void BarTalk()
-        {
-            Console.WriteLine("Hello, stranger what can i do for you?");
-            string barChoice1 = "Can I ask what you know about the princess?";
-            Console.WriteLine($"{barChoice1} Please press enter to find out more!");
-            var answer = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("You speak with the bar tender and ask what he knows about the princess. He says: All that I know is that a few nights a week, she would come in here and buy a bottle of gin " +
-                "which she wouldnt drink. No, she would pour it over her hands to get tree sap off. The king doesnt allow alcohol in his castle but what was she doing with all of that sap in her hands ? ");
-        }
-        public static void TownScene()
-        {
-            Console.WriteLine("The town square.Behind you is the castle gate.To your left is the pub and market; to your right is the church;" +
-                    " and in front of you is the road out of town. Where would you like to go next Adventurer?");
-        }
-        public static void YoureBroke()
-        {
-            Console.WriteLine("Sorry, you dont have the coin for that!");
-        }
+        
+      
+       
+        
+      
         public static void MarketScene()
         {
             var marketgreet = "Adventurer! Adventurer! Have you found the princess yet? We are so worried for her safety?";

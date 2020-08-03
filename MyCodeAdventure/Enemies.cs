@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyCodeAdventure
 {
-    class Enemies
+    public class Enemies
     {
         public static List<Enemies> PunyLevelEnemys { get; set; } = new List<Enemies>();
         public static List<Enemies> LowLevelEnemys { get; set; } = new List<Enemies>();
@@ -44,7 +44,7 @@ namespace MyCodeAdventure
            
             for(int i = 0; i < PunyLevelEnemys.Count; i++)
             { 
-                Console.WriteLine(PunyLevelEnemys[rand.Next(PunyLevelEnemys.Count)]);
+                Console.WriteLine(PunyLevelEnemys[rand.Next(PunyLevelEnemys)]);
             }
             
         } 
