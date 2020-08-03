@@ -153,7 +153,11 @@ namespace MyCodeAdventure
                     }
                     break;
 
-                   
+                case "3":
+                    ChurchScene();
+                    break;
+
+               
 
             }
            
