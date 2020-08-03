@@ -46,3 +46,4 @@ namespace MyCodeAdventure.Character
             //
         }
     }
+}

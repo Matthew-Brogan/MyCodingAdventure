@@ -17,8 +17,8 @@ namespace MyCodeAdventure
         
         public static void AddToInventory(string items)
         {
-            
-            inventoryList.Add(items)
+
+            inventoryList.Add(items);
         }
     }
     
