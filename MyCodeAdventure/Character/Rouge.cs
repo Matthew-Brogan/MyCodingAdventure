@@ -14,8 +14,18 @@ namespace MyCodeAdventure.Character
         public int HonorLevel { get; set; }
         public int Stamina { get; set; }
         public int Health { get; set; }
-
         public int Dexterity { get; set; }
+        public Rouge(string charName, int xp, int str, int intel, int honor, int stamina, int health, int dex)
+        {
+            CharacterName = charName;
+            StartXP = xp;
+            Strength = str;
+            Intelegence = intel;
+            HonorLevel = honor;
+            Stamina = stamina;
+            Health = health;
+            Dexterity = dex;
+        }
         public void NinjaMoves()
         {
             Stamina += 20;
