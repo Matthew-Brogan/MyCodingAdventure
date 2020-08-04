@@ -15,8 +15,19 @@ namespace MyCodeAdventure.Character
         public int HonorLevel { get; set; }
         public int Stamina { get; set; }
         public int Health { get; set; }
-
         public int Mana { get; set; }
+
+        public Wizard(string charName, int xp, int str, int intel, int honor, int stamina, int health, int mana)
+        {
+            CharacterName = charName;
+            StartXP = xp;
+            Strength = str;
+            Intelegence = intel;
+            HonorLevel = honor;
+            Stamina = stamina;
+            Health = health;
+            Mana = mana;
+        }
         public void HealingSpell() //needs mana to do this.
         {
             Health += 20;

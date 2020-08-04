@@ -14,8 +14,19 @@ namespace MyCodeAdventure.Character
         public int HonorLevel { get; set; }
         public int Stamina { get; set; }
         public int Health { get; set; }
-
         public int Virtue { get; set; }
+
+        public Monk(string charName, int xp, int str, int intel, int honor, int stamina, int health, int virtue)
+        {
+            CharacterName = charName;
+            StartXP = xp;
+            Strength = str;
+            Intelegence = intel;
+            HonorLevel = honor;
+            Stamina = stamina;
+            Health = health;
+            Virtue = virtue;
+        }
         public void Pray() //needs virtue
         {
             HonorLevel += 10;

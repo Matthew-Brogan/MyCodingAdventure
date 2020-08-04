@@ -14,8 +14,19 @@ namespace MyCodeAdventure.Character
         public int HonorLevel { get; set; }
         public int Stamina { get; set; }
         public int Health { get; set; }
-
         public int Power { get; set; }
+
+        public Striker(string charName, int xp, int str, int intel, int honor, int stamina, int health, int pow)
+        {
+            CharacterName = charName;
+            StartXP = xp;
+            Strength = str;
+            Intelegence = intel;
+            HonorLevel = honor;
+            Stamina = stamina;
+            Health = health;
+            Power = pow;
+        }
         public void Steroids()
         {
             Strength += 20;

@@ -43,10 +43,20 @@ namespace MyCodeAdventure.Story.Choices
         }
         public static void TownBartender()
         {
-            ConsoleLogging.BarTalk();
+            BarTalk();
             Console.WriteLine("Please press enter to exit the pub");
             Console.ReadLine();
             IntroChoices.TownScene();
+        }
+        public static void BarTalk()
+        {
+            Console.WriteLine("Hello, stranger what can i do for you?");
+            string barChoice1 = "Can I ask what you know about the princess?";
+            Console.WriteLine($"{barChoice1} Please press enter to find out more!");
+            var answer = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("You speak with the bar tender and ask what he knows about the princess. He says: All that I know is that a few nights a week, she would come in here and buy a bottle of gin " +
+                "which she wouldnt drink. No, she would pour it over her hands to get tree sap off. The king doesnt allow alcohol in his castle but what was she doing with all of that sap in her hands ? ");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MyCodeAdventure.Story.Base_Story;
+﻿using MyCodeAdventure.Character;
+using MyCodeAdventure.Story.Base_Story;
 using MyCodeAdventure.Story.Choices;
 using System;
 using System.Collections.Generic;
@@ -36,18 +37,20 @@ namespace MyCodeAdventure
         }
         public static void CharacterSelected()
         {
+            
             string[] stats = { "Strength:10 Stamina:8 Dexterity:6 Intelligence:4", "Strength:6 Stamina:9 Dexterity:10 Intelligence:7",
                 "Strength:4 Stamina:7 Dexterity:7 Intelligence:10", "Strength:6 Stamina:9 Dexterity:9 Intelligence:7" };
             string chosen = Console.ReadLine();
             switch (chosen)
             {
                 case "1":
+                    //Striker striker = new Striker();  (add in the attibutes. user name/char name...)
                     Console.WriteLine($"You have chosen the Striker class! The strongest and " +
                    $"bravest of all!");
                     Console.WriteLine();
                     Console.WriteLine($"Your stats are currently:");
                     Console.WriteLine();
-                    Console.WriteLine($"{stats[0]}");
+                    Console.WriteLine($"{stats[0]}"); 
                     Console.WriteLine();
                     Console.WriteLine();
                     Console.WriteLine("Farewell brave warrior!");
@@ -91,16 +94,6 @@ namespace MyCodeAdventure
 
         }
 
-        public static void BarTalk()
-        {
-            Console.WriteLine("Hello, stranger what can i do for you?");
-            string barChoice1 = "Can I ask what you know about the princess?";
-            Console.WriteLine($"{barChoice1} Please press enter to find out more!");
-            var answer = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("You speak with the bar tender and ask what he knows about the princess. He says: All that I know is that a few nights a week, she would come in here and buy a bottle of gin " +
-                "which she wouldnt drink. No, she would pour it over her hands to get tree sap off. The king doesnt allow alcohol in his castle but what was she doing with all of that sap in her hands ? ");
-        }
     }
 }
        
