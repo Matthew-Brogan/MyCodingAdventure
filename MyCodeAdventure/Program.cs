@@ -1,4 +1,5 @@
 ﻿using MyCodeAdventure.Story;
+using MyCodeAdventure.Story._3._Forest.Choices;
 using System;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography.X509Certificates;
@@ -97,6 +98,8 @@ namespace MyCodeAdventure
                     *
                *develop ideas for the enemy and classes(minions and adds vs boss/elite)
              */
+            ForestFight.FirstFight();
+
             ConsoleLogging.OpenAdventure();
             //Just an idea for an opener -working on the town square scene.
 
@@ -109,6 +112,8 @@ namespace MyCodeAdventure
             // town scenes with exit to forest and first fight
             ConsoleLogging.BeginJourney();
             TownControl.TownSwitch();
+
+            ForestFight.FirstFight();
 
         }
     }

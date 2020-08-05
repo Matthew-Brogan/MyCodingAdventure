@@ -5,4 +5,18 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Story\3. Forest\Base Controls\" />
+    <Folder Include="Story\4. Cave\Base Controls\" />
+    <Folder Include="Story\4. Cave\Choices\" />
+    <Folder Include="Story\5. Dungeon\Base Controls\" />
+    <Folder Include="Story\5. Dungeon\Choices\" />
+    <Folder Include="Story\6. Big Choice\Base Controls\" />
+    <Folder Include="Story\6. Big Choice\Choices\" />
+    <Folder Include="Story\7. Back To Town%28good choice%29\Base Controls\" />
+    <Folder Include="Story\7. Back To Town%28good choice%29\Choices\" />
+    <Folder Include="Story\8. DarkTower%28evil choice%29\Base Controls\" />
+    <Folder Include="Story\8. DarkTower%28evil choice%29\Choices\" />
+  </ItemGroup>
+
 </Project>

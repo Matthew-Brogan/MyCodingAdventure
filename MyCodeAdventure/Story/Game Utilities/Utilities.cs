@@ -32,5 +32,6 @@ namespace MyCodeAdventure.Story.Base_Story
                 " \nAs you go deeper in you grow tired and decide to have a quick rest under an ancient tree." +
                 "\n You are rudely awakened by the sound of two familiar voices approaching....");
         }
+        
     }
 }

@@ -4,54 +4,47 @@ using System.Text;
 
 namespace MyCodeAdventure.Character
 {
-    class Rouge : ICharacter
+    public static class Rouge
     {
-        public string CharacterName { get; set; }
-        public string Class { get; set; }
-        public int StartXP { get; set; }
-        public int Strength { get; set; }
-        public int Intelegence { get; set; }
-        public int HonorLevel { get; set; }
-        public int Stamina { get; set; }
-        public int Health { get; set; }
-        public int Dexterity { get; set; }
-        public Rouge(string charName, int xp, int str, int intel, int honor, int stamina, int health, int dex)
-        {
-            CharacterName = charName;
-            StartXP = xp;
-            Strength = str;
-            Intelegence = intel;
-            HonorLevel = honor;
-            Stamina = stamina;
-            Health = health;
-            Dexterity = dex;
-        }
-        public void NinjaMoves()
+        public static string CharacterName { get; set; }
+        public static string Class { get; set; }
+
+        public static int StartXP { get; set; } = 0;
+        public static int HonorLevel { get; set; } = 10;
+        public static int Health { get; set; } = 7;
+
+        public static int Strength { get; set; } = 5;
+        public static int Intelegence { get; set; } = 7;
+        public static int Stamina { get; set; } = 10;
+
+        public static int Dexterity { get; set; } = 10;
+        
+        public static void NinjaMoves()
         {
             Stamina += 20;
         }
-        public void BackStab()
+        public static void BackStab()
         {
             //give damage of 20;
         }
-        public void GetCharacterName(string charname)
+        public static void GetCharacterName(string charname)
         {
             CharacterName = charname;
         }
 
-        public void GetClass(string userChoice)
+        public static void GetClass(string userChoice)
         {
             Class = userChoice;
         }
-        public void TakeDamage(int damage)
+        public static void TakeDamage(int damage)
         {
             Health -= damage;
         }
-        public void Heal()
+        public static void Heal()
         {
             Health += 5; //base Healing. Can be more depending on potions and whatnot
         }
-        public void GiveDamage()
+        public static void GiveDamage()
         {
             //
         }

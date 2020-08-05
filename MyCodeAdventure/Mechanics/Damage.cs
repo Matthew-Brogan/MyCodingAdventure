@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyCodeAdventure
 {
-    class Damage
+    public class Damage
     {
 
         //Based on the input attack. (light, medium, heavy, blocked, blocked medium, blocked heavy)
@@ -25,7 +25,7 @@ namespace MyCodeAdventure
          *****just an idea*****
          */
 
-        public float LightCrit()//put in the damage here. it takes away some damage.
+        public static float LightCrit()//put in the damage here. it takes away some damage.
 
         {
             var baseDamage = LightDamage(5);
@@ -35,7 +35,7 @@ namespace MyCodeAdventure
             return critDamage;
 
         }
-        public float MedCrit()//put in the damage here. it takes away some damage.
+        public static float MedCrit()//put in the damage here. it takes away some damage.
 
         {
             var baseDamage = MedDamage(5);
@@ -45,7 +45,7 @@ namespace MyCodeAdventure
             return critDamage;
 
         }
-        public float HeavyCrit()//put in the damage here. it takes away some damage.
+        public static float HeavyCrit()//put in the damage here. it takes away some damage.
 
         {
             var baseDamage = HeavyDamage(5);
@@ -87,7 +87,7 @@ namespace MyCodeAdventure
         }
 
         /*******************Damage**********************/
-        private static int LightDamage(int lightDamage)
+        public static int LightDamage(int lightDamage)
         {
             int[] randos = new int[lightDamage];
 
@@ -104,7 +104,7 @@ namespace MyCodeAdventure
 
             return answer;
         }
-        private static int MedDamage(int medDamage)
+        public static int MedDamage(int medDamage)
         {
             int[] randos = new int[medDamage];
 
@@ -119,7 +119,7 @@ namespace MyCodeAdventure
 
             return answer;
         }
-        private static int HeavyDamage(int heavyDamage)
+        public static int HeavyDamage(int heavyDamage)
         {
             int[] randos = new int[heavyDamage];
 
@@ -135,7 +135,7 @@ namespace MyCodeAdventure
             return answers;
         }
         /********************Attack*********************/
-        private static int[] LightAttack(int lightAttack)
+        public static int[] LightAttack(int lightAttack)
         {
             int[] randos = new int[lightAttack];
 
@@ -150,7 +150,7 @@ namespace MyCodeAdventure
 
             return null;
         }
-        private static int[] MedAttack(int medAttack)
+        public static int[] MedAttack(int medAttack)
         {
             int[] randos = new int[medAttack];
 
@@ -165,7 +165,7 @@ namespace MyCodeAdventure
 
             return null;
         }
-        private static int[] HeavyAttack(int heavyAttack)
+        public static int[] HeavyAttack(int heavyAttack)
         {
             int[] randos = new int[heavyAttack];
 
