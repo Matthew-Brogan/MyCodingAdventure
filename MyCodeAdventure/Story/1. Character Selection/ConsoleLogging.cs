@@ -23,7 +23,7 @@ namespace MyCodeAdventure
                       " closet and her last known location - the town square.");
             Console.WriteLine();
         }
-        public static void ChooseCharacter()
+        public static string ChooseCharacter()
         {
 
             Console.WriteLine("Choose Your Class:");
@@ -33,18 +33,20 @@ namespace MyCodeAdventure
                 var selectable = allclass[i];
                 Console.WriteLine(selectable);
             }
+            string chosen = Console.ReadLine();
+            return chosen;
 
         }
         public static void CharacterSelected()
         {
-            
-            string[] stats = { "Strength:10 Stamina:8 Dexterity:6 Intelligence:4", "Strength:6 Stamina:9 Dexterity:10 Intelligence:7",
-                "Strength:4 Stamina:7 Dexterity:7 Intelligence:10", "Strength:6 Stamina:9 Dexterity:9 Intelligence:7" };
-            string chosen = Console.ReadLine();
-            switch (chosen)
+            switch (ChooseCharacter())
             {
                 case "1":
-                    //Striker striker = new Striker();  (add in the attibutes. user name/char name...)
+                    /*choos class.
+                     Striker.Name
+                    xp 0
+                    points. 30*/
+                    
                     Console.WriteLine($"You have chosen the Striker class! The strongest and " +
                    $"bravest of all!");
                     Console.WriteLine();

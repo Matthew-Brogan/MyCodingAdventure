@@ -4,57 +4,49 @@ using System.Text;
 
 namespace MyCodeAdventure.Character
 {
-    class Wizard : ICharacter
+    public static class Wizard
     {
 
-        public string CharacterName { get; set; }
-        public string Class { get; set; }
-        public int StartXP { get; set; }
-        public int Strength { get; set; }
-        public int Intelegence { get; set; }
-        public int HonorLevel { get; set; }
-        public int Stamina { get; set; }
-        public int Health { get; set; }
-        public int Mana { get; set; }
+        public static string CharacterName { get; set; }
+        public static string Class { get; set; }
 
-        public Wizard(string charName, int xp, int str, int intel, int honor, int stamina, int health, int mana)
-        {
-            CharacterName = charName;
-            StartXP = xp;
-            Strength = str;
-            Intelegence = intel;
-            HonorLevel = honor;
-            Stamina = stamina;
-            Health = health;
-            Mana = mana;
-        }
-        public void HealingSpell() //needs mana to do this.
+        public static int StartXP { get; set; } = 0;
+        public static int HonorLevel { get; set; } = 10;
+        public static int Health { get; set; } = 5;
+
+        public static int Strength { get; set; } = 4;
+        public static int Intelegence { get; set; } = 10;
+        public static int Stamina { get; set; } = 5;
+
+        public static int Mana { get; set; } = 10;
+
+        public static void HealingSpell() //needs mana to do this.
         {
             Health += 20;
         }
-        public void FireBall() //needs mana to do this.
+        public static void FireBall() //needs mana to do this.
         {
             //give damage of 25
         }
 
-        public void GetCharacterName(string charname)
+        public static void GetCharacterName(string charname)
         {
             CharacterName = charname;
         }
 
-        public void GetClass(string userChoice)
+        public static void GetClass(string userChoice)
         {
             Class = userChoice;
         }
-        public void TakeDamage(int damage)
+        public static void TakeDamage(int damage)
         {
             Health -= damage;
         }
-        public void Heal()
+        public static void Heal()
         {
             Health += 5; //base Healing. Can be more depending on potions and whatnot
         }
-        public void GiveDamage()
+        public static void GiveDamage()
         {
             //
         }
